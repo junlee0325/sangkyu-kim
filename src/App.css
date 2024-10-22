@@ -1,38 +1,766 @@
-.App {
-  text-align: center;
+* {
+  font-family: "Titillium Web", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 1201px) {
+  #App {
+    display: block;
+    clear: both;
+  }
+  #body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  #Navbar {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 60px;
+    background-color: white;
+  }
+  #Navbar div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  #Navbar div img {
+    height: 40px;
+    padding: 30px;
+  }
+  #Navbar div a {
+    height: auto;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    border-left: 1px rgb(0, 0, 0) solid;
+  }
+  #Home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../public/images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 80px;
+  }
+  #Home #homeContent {
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+    width: 70%;
+    border-radius: 20px;
+  }
+  #Home #homeContent img {
+    width: 30%;
+    border: 2px black solid;
+    padding: 10px;
+  }
+  #Home #homeContent .homeText {
+    width: 60%;
+  }
+  #Home #homeContent .homeText h2 {
+    font-size: 35px;
+    padding: 0;
+    margin: 0;
+  }
+  #Home #homeContent .homeText p {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  #Home #homeContent .homeText h4 {
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+  #Services {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    padding: 20px 0;
+  }
+  #Services h2 {
+    font-size: 35px;
+    border-bottom: 2px black solid;
+    padding: 0 30px;
+  }
+  #Services span {
+    font-size: 20px;
+  }
+  #Services #servicesBox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10px;
+    margin: 20px 0px;
+  }
+  #Services #servicesBox div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    width: 150px;
+    border: 2px black solid;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    text-shadow: rgb(0, 0, 0) 1px 0px 10px;
+  }
+  #Services #servicesBox #electrical {
+    background-image: url("../public/images/electrical.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #plumbing {
+    background-image: url("../public/images/plumbing.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #hvac {
+    background-image: url("../public/images/hvac.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #repairs {
+    background-image: url("../public/images/repair.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #flooring {
+    background-image: url("../public/images/flooring.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #walls {
+    background-image: url("../public/images/wall.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #kitchen {
+    background-image: url("../public/images/kitchen.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #bathrooms {
+    background-image: url("../public/images/bathroom.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #decks {
+    background-image: url("../public/images/deck.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #more {
+    background-image: url("../public/images/more.jpg");
+    background-size: cover;
+  }
+  #Gallery {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    padding: 20px 5%;
+    background-color: rgb(99, 103, 128);
+    color: white;
+  }
+  #Gallery h2 {
+    font-size: 35px;
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    padding: 0 30px;
+  }
+  #Gallery .imgSet {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 3px rgb(255, 255, 255) solid;
+    padding: 3px;
+    margin: 3px;
+  }
+  #Gallery .imgSet .Image {
+    width: auto;
+    cursor: pointer;
+  }
+  #Gallery .imgSet .Image .img {
+    width: 100%;
+  }
+  #Gallery .imgSet .Image .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  #Gallery .imgSet .Image .overlay .overlay-content {
+    position: relative;
+  }
+  #Gallery .imgSet .Image .overlay .overlay-content .enlarged-image {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+  #Gallery .imgSet .Image .overlay .overlay-content .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 8px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #Contact {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    padding: 20px 0;
+  }
+  #Contact h2 {
+    font-size: 35px;
+    border-bottom: 2px black solid;
+    padding: 0 30px;
+  }
+  #Contact > div {
+    padding: 0px 0px 50px 0px;
+    font-size: 25px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #Contact > div div {
+    width: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    padding-left: 50px;
+  }
+  #Contact > div img {
+    border-radius: 50%;
+    width: 30%;
+    border: 2px black solid;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 768px) and (max-width: 1200px) {
+  #App {
+    display: block;
+    clear: both;
   }
-  to {
-    transform: rotate(360deg);
+  #body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  #Navbar {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 60px;
+    background-color: white;
+  }
+  #Navbar div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  #Navbar div img {
+    height: 40px;
+    padding: 30px;
+  }
+  #Navbar div a {
+    height: auto;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    border-left: 1px rgb(0, 0, 0) solid;
+  }
+  #Home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../public/images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 80px;
+  }
+  #Home #homeContent {
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+    width: 70%;
+    border-radius: 20px;
+  }
+  #Home #homeContent img {
+    width: 30%;
+    border: 2px black solid;
+    padding: 10px;
+  }
+  #Home #homeContent .homeText {
+    width: 60%;
+  }
+  #Home #homeContent .homeText h2 {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  #Home #homeContent .homeText p {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+  #Home #homeContent .homeText h4 {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+  #Services {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    padding: 20px 0;
+  }
+  #Services h2 {
+    font-size: 30px;
+    border-bottom: 2px black solid;
+    padding: 0 30px;
+  }
+  #Services span {
+    font-size: 18px;
+  }
+  #Services #servicesBox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10px;
+    margin: 20px 0px;
+  }
+  #Services #servicesBox div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    width: 150px;
+    border: 2px black solid;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    text-shadow: rgb(0, 0, 0) 1px 0px 10px;
+  }
+  #Services #servicesBox #electrical {
+    background-image: url("../public/images/electrical.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #plumbing {
+    background-image: url("../public/images/plumbing.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #hvac {
+    background-image: url("../public/images/hvac.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #repairs {
+    background-image: url("../public/images/repair.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #flooring {
+    background-image: url("../public/images/flooring.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #walls {
+    background-image: url("../public/images/wall.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #kitchen {
+    background-image: url("../public/images/kitchen.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #bathrooms {
+    background-image: url("../public/images/bathroom.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #decks {
+    background-image: url("../public/images/deck.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #more {
+    background-image: url("../public/images/more.jpg");
+    background-size: cover;
+  }
+  #Gallery {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    padding: 20px 5%;
+    background-color: rgb(99, 103, 128);
+    color: white;
+  }
+  #Gallery h2 {
+    font-size: 30px;
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    padding: 0 30px;
+  }
+  #Gallery .imgSet {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 3px rgb(255, 255, 255) solid;
+    padding: 3px;
+    margin: 3px;
+  }
+  #Gallery .imgSet .Image {
+    width: auto;
+    cursor: pointer;
+  }
+  #Gallery .imgSet .Image .img {
+    width: 100%;
+  }
+  #Gallery .imgSet .Image .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  #Gallery .imgSet .Image .overlay .overlay-content {
+    position: relative;
+  }
+  #Gallery .imgSet .Image .overlay .overlay-content .enlarged-image {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+  #Gallery .imgSet .Image .overlay .overlay-content .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 8px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #Contact {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    padding: 20px 0;
+  }
+  #Contact h2 {
+    font-size: 30px;
+    border-bottom: 2px black solid;
+    padding: 0 30px;
+  }
+  #Contact > div {
+    padding: 0px 0px 50px 0px;
+    font-size: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #Contact > div div {
+    width: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    padding-left: 50px;
+  }
+  #Contact > div img {
+    border-radius: 50%;
+    width: 25%;
+    border: 2px black solid;
   }
 }
+@media (max-width: 767px) {
+  #App {
+    display: block;
+    clear: both;
+  }
+  #body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  #Navbar {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 45px;
+    background-color: white;
+    border-bottom: 2px black solid;
+  }
+  #Navbar div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  #Navbar div img {
+    height: 40px;
+    padding: 5px;
+  }
+  #Navbar div a {
+    height: auto;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+  }
+  #Navbar div #homeNav {
+    display: none;
+  }
+  #Home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../public/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 10px;
+  }
+  #Home #homeContent {
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    border-radius: 20px;
+  }
+  #Home #homeContent img {
+    width: 20%;
+    border: 1px black solid;
+    padding: 5px;
+  }
+  #Home #homeContent .homeText {
+    width: 100%;
+  }
+  #Home #homeContent .homeText h2 {
+    font-size: 20px;
+    padding-top: 5px;
+    margin: 0;
+  }
+  #Home #homeContent .homeText h4 {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+  }
+  #Home #homeContent .homeText p {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
+  #Services {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    padding: 0px 0;
+  }
+  #Services h2 {
+    font-size: 25px;
+    border-bottom: 2px black solid;
+    padding: 0 30px;
+  }
+  #Services span {
+    font-size: 14px;
+  }
+  #Services #servicesBox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    gap: 5px;
+    margin: 15px 0px;
+  }
+  #Services #servicesBox div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    width: 120px;
+    border: 2px black solid;
+    border-radius: 50%;
+    font-size: 14px;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    text-shadow: rgb(0, 0, 0) -2px 0 3px;
+  }
+  #Services #servicesBox #electrical {
+    background-image: url("../public/images/electrical.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #plumbing {
+    background-image: url("../public/images/plumbing.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #hvac {
+    background-image: url("../public/images/hvac.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #repairs {
+    background-image: url("../public/images/repair.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #flooring {
+    background-image: url("../public/images/flooring.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #walls {
+    background-image: url("../public/images/wall.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #kitchen {
+    background-image: url("../public/images/kitchen.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #bathrooms {
+    background-image: url("../public/images/bathroom.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #decks {
+    background-image: url("../public/images/deck.jpg");
+    background-size: cover;
+  }
+  #Services #servicesBox #more {
+    background-image: url("../public/images/more.jpg");
+    background-size: cover;
+  }
+  #Gallery {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    padding: 20px 5%;
+    background-color: rgb(99, 103, 128);
+    color: white;
+  }
+  #Gallery h2 {
+    font-size: 25px;
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    padding: 0 30px;
+  }
+  #Gallery .imgSet {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    padding: 3px;
+    margin: 3px;
+  }
+  #Gallery .imgSet .Image {
+    width: 30%;
+    cursor: pointer;
+  }
+  #Gallery .imgSet .Image .img {
+    width: 100%;
+  }
+  #Gallery .imgSet .Image .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  #Gallery .imgSet .Image .overlay .overlay-content {
+    position: relative;
+  }
+  #Gallery .imgSet .Image .overlay .overlay-content .enlarged-image {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+  #Gallery .imgSet .Image .overlay .overlay-content .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 8px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #Contact {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    padding: 20px 0;
+  }
+  #Contact h2 {
+    font-size: 25px;
+    border-bottom: 2px black solid;
+    padding: 0 30px;
+  }
+  #Contact > div {
+    padding: 0px 0px 50px 0px;
+    font-size: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  #Contact > div div {
+    width: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+  #Contact > div img {
+    border-radius: 50%;
+    width: 40%;
+    border: 2px black solid;
+  }
+}/*# sourceMappingURL=App.css.map */
