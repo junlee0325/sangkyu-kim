@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cfe466ef.css",
+    "main.js": "/static/js/main.07067407.js",
+    "static/js/453.d1c4e265.chunk.js": "/static/js/453.d1c4e265.chunk.js",
+    "static/media/bg.png": "/static/media/bg.a9544065e11f9f2c2a09.png",
+    "static/media/more.jpg": "/static/media/more.b7d145882e2bef017cc2.jpg",
+    "static/media/flooring.jpg": "/static/media/flooring.a4573163bf6f2a3fd944.jpg",
+    "static/media/plumbing.jpg": "/static/media/plumbing.6dd0e8df399975375c93.jpg",
+    "static/media/kitchen.jpg": "/static/media/kitchen.b97041db8cde6296ac01.jpg",
+    "static/media/deck.jpg": "/static/media/deck.b2112701cbc017fa06e8.jpg",
+    "static/media/electrical.jpg": "/static/media/electrical.f7173fb5bf15db160d6b.jpg",
+    "static/media/wall.jpg": "/static/media/wall.33c43dc26cc114578bc2.jpg",
+    "static/media/hvac.jpg": "/static/media/hvac.3d517d5efa4804b67076.jpg",
+    "static/media/repair.jpg": "/static/media/repair.dfd4112664b7b2077416.jpg",
+    "static/media/bathroom.jpg": "/static/media/bathroom.e15848801a6089c475ca.jpg",
+    "index.html": "/index.html",
+    "main.cfe466ef.css.map": "/static/css/main.cfe466ef.css.map",
+    "main.07067407.js.map": "/static/js/main.07067407.js.map",
+    "453.d1c4e265.chunk.js.map": "/static/js/453.d1c4e265.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cfe466ef.css",
+    "static/js/main.07067407.js"
+  ]
+}
