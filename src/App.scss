@@ -70,7 +70,7 @@
             img {
                 width:30%;
                 border: 2px black solid;
-                padding-top: 10px;
+                padding: 10px;
             }
         
             .homeText {
@@ -647,8 +647,9 @@
             border-radius: 20px;
 
             img {
-                width:20%;
+                width: 20%;
                 border: 1px black solid;
+                aspect-ratio: 1/1;
                 padding: 5px;
             }
         
