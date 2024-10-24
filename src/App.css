@@ -572,6 +572,7 @@
   #Home #homeContent img {
     width: 20%;
     border: 1px black solid;
+    aspect-ratio: 1/1;
     padding: 5px;
   }
   #Home #homeContent .homeText {
