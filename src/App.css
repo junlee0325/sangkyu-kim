@@ -175,24 +175,24 @@
     border-bottom: 2px rgb(255, 255, 255) solid;
     padding: 0 30px;
   }
-  #Gallery .imgSet {
+  #Gallery .albums {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-around;
     align-items: center;
     gap: 5px;
     border-bottom: 3px rgb(255, 255, 255) solid;
     padding: 3px;
     margin: 3px;
   }
-  #Gallery .imgSet .Image {
-    width: auto;
+  #Gallery .albums .Album {
+    width: 30%;
     cursor: pointer;
   }
-  #Gallery .imgSet .Image .img {
+  #Gallery .albums .Album .thumbnail {
     width: 100%;
   }
-  #Gallery .imgSet .Image .overlay {
+  #Gallery .albums .Album .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -204,14 +204,16 @@
     align-items: center;
     z-index: 1000;
   }
-  #Gallery .imgSet .Image .overlay .overlay-content {
+  #Gallery .albums .Album .overlay .overlay-content {
     position: relative;
+    display: flex;
+    flex-flow: column nowrap;
   }
-  #Gallery .imgSet .Image .overlay .overlay-content .enlarged-image {
-    max-width: 90vw;
-    max-height: 90vh;
+  #Gallery .albums .Album .overlay .overlay-content .enlarged-image {
+    max-width: 80vw;
+    max-height: 80vh;
   }
-  #Gallery .imgSet .Image .overlay .overlay-content .close-button {
+  #Gallery .albums .Album .overlay .overlay-content .close-button {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -221,6 +223,14 @@
     color: rgb(0, 0, 0);
     font-size: 20px;
     cursor: pointer;
+  }
+  #Gallery .albums .Album .overlay .overlay-content .imgSet {
+    width: 100%;
+  }
+  #Gallery .albums .Album .overlay .overlay-content .imgSet img {
+    margin: 5px;
+    border: white 2px solid;
+    width: 100px;
   }
   #Contact {
     display: flex;
@@ -428,24 +438,24 @@
     border-bottom: 2px rgb(255, 255, 255) solid;
     padding: 0 30px;
   }
-  #Gallery .imgSet {
+  #Gallery .albums {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-around;
     align-items: center;
     gap: 5px;
     border-bottom: 3px rgb(255, 255, 255) solid;
     padding: 3px;
     margin: 3px;
   }
-  #Gallery .imgSet .Image {
-    width: auto;
+  #Gallery .albums .Album {
+    width: 30%;
     cursor: pointer;
   }
-  #Gallery .imgSet .Image .img {
+  #Gallery .albums .Album .thumbnail {
     width: 100%;
   }
-  #Gallery .imgSet .Image .overlay {
+  #Gallery .albums .Album .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -457,14 +467,16 @@
     align-items: center;
     z-index: 1000;
   }
-  #Gallery .imgSet .Image .overlay .overlay-content {
+  #Gallery .albums .Album .overlay .overlay-content {
     position: relative;
+    display: flex;
+    flex-flow: column nowrap;
   }
-  #Gallery .imgSet .Image .overlay .overlay-content .enlarged-image {
-    max-width: 90vw;
-    max-height: 90vh;
+  #Gallery .albums .Album .overlay .overlay-content .enlarged-image {
+    max-width: 80vw;
+    max-height: 80vh;
   }
-  #Gallery .imgSet .Image .overlay .overlay-content .close-button {
+  #Gallery .albums .Album .overlay .overlay-content .close-button {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -474,6 +486,14 @@
     color: rgb(0, 0, 0);
     font-size: 20px;
     cursor: pointer;
+  }
+  #Gallery .albums .Album .overlay .overlay-content .imgSet {
+    width: 100%;
+  }
+  #Gallery .albums .Album .overlay .overlay-content .imgSet img {
+    margin: 5px;
+    border: white 2px solid;
+    width: 100px;
   }
   #Contact {
     display: flex;
@@ -682,27 +702,27 @@
   }
   #Gallery h2 {
     font-size: 25px;
-    border-bottom: 2px rgb(255, 255, 255) solid;
+    border-bottom: 2px white solid;
     padding: 0 30px;
   }
-  #Gallery .imgSet {
+  #Gallery .albums {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     gap: 5px;
-    border-bottom: 2px rgb(255, 255, 255) solid;
+    border-bottom: 3px rgb(255, 255, 255) solid;
     padding: 3px;
     margin: 3px;
   }
-  #Gallery .imgSet .Image {
+  #Gallery .albums .Album {
     width: 30%;
     cursor: pointer;
   }
-  #Gallery .imgSet .Image .img {
+  #Gallery .albums .Album .thumbnail {
     width: 100%;
   }
-  #Gallery .imgSet .Image .overlay {
+  #Gallery .albums .Album .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -714,23 +734,37 @@
     align-items: center;
     z-index: 1000;
   }
-  #Gallery .imgSet .Image .overlay .overlay-content {
+  #Gallery .albums .Album .overlay .overlay-content {
     position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
   }
-  #Gallery .imgSet .Image .overlay .overlay-content .enlarged-image {
+  #Gallery .albums .Album .overlay .overlay-content .enlarged-image {
     max-width: 90vw;
     max-height: 90vh;
   }
-  #Gallery .imgSet .Image .overlay .overlay-content .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  #Gallery .albums .Album .overlay .overlay-content .close-button {
+    position: fixed;
+    top: 40px;
+    right: 30px;
     background: white;
-    padding: 8px;
+    padding: 3px;
     border-radius: 20px;
     color: rgb(0, 0, 0);
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
+  }
+  #Gallery .albums .Album .overlay .overlay-content .imgSet {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  #Gallery .albums .Album .overlay .overlay-content .imgSet img {
+    margin: 5px;
+    border: white 2px solid;
+    width: 80px;
   }
   #Contact {
     display: flex;

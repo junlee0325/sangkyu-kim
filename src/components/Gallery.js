@@ -1,46 +1,79 @@
 import React from 'react'
-import { Image } from "./Image"
+import { Album } from "./Album"
 
 export const Gallery = () => {
 
-  const imagePaths = [];
+    
+    const albumA = [
+      "/images/img1.jpg",
+      "/images/img2.jpg",
+      "/images/img3.jpg",
+      "/images/img5.jpg",
+      "/images/img4.jpg"
+    ]
 
-  for(let i = 1; i <= 29; i++) {
-  imagePaths.push(`/images/img${i}.jpg`)
-  }
+    const albumB = [
+      "/images/img6.jpg",
+      "/images/img7.jpg",
+      "/images/img8.jpg",
+      "/images/img9.jpg",
+      "/images/img10.jpg",
+      "/images/img11.jpg"
+    ]
+
+    const albumC = [
+      "/images/img12.jpg",
+      "/images/img13.jpg",
+      "/images/img14.jpg",
+      "/images/img15.jpg"
+    ]
+
+    const albumD = [
+      "/images/img16.jpg",
+      "/images/img17.jpg"
+    ]
+
+    const albumE = [
+      "/images/img18.jpg",
+      "/images/img19.jpg",
+      "/images/img20.jpg"
+    ]
+
+    const albumF = [
+      "/images/img21.jpg",
+      "/images/img22.jpg"
+    ]
+
+    const albumG = [
+      "/images/img23.jpg",
+      "/images/img24.jpg"
+    ]
+
+    const albumH = [
+      "/images/img25.jpg",
+      "/images/img26.jpg"
+    ]
+
+    const albumI = [
+      "/images/img27.jpg",
+      "/images/img28.jpg",
+      "/images/img29.jpg"
+    ]
 
   return (
     <div id="Gallery">
         <h2>Gallery</h2>
-        <div className="imgSet">
-          {imagePaths.slice(0,5).map((imagePath , i) => (
-            <Image imageUrl={imagePath} altText={`Image ${i + 1}`} />
-          ))}
-        </div>
-        <div className="imgSet">
-          {imagePaths.slice(5,11).map((imagePath , i) => (
-            <Image imageUrl={imagePath} altText={`Image ${i + 1}`} />
-          ))}
-        </div>
-        <div className="imgSet">
-          {imagePaths.slice(11,15).map((imagePath , i) => (
-            <Image imageUrl={imagePath} altText={`Image ${i + 1}`} />
-          ))}
-        </div>
-        <div className="imgSet">
-          {imagePaths.slice(15,20).map((imagePath , i) => (
-            <Image imageUrl={imagePath} altText={`Image ${i + 1}`} />
-          ))}
-        </div>
-        <div className="imgSet">
-          {imagePaths.slice(20,24).map((imagePath , i) => (
-            <Image imageUrl={imagePath} altText={`Image ${i + 1}`} />
-          ))}
-        </div>
-        <div className="imgSet">
-          {imagePaths.slice(24,29).map((imagePath , i) => (
-            <Image imageUrl={imagePath} altText={`Image ${i + 1}`} />
-          ))}
+
+        <div className="albums">
+          <Album albumID={albumA} />
+          <Album albumID={albumB} />
+          <Album albumID={albumC} />
+          <Album albumID={albumD} />
+          <Album albumID={albumE} />
+          <Album albumID={albumF} />
+          <Album albumID={albumG} />
+          <Album albumID={albumH} />
+          <Album albumID={albumI} />
         </div>
     </div>
   )
