@@ -39,6 +39,17 @@
     color: black;
     border-left: 1px rgb(0, 0, 0) solid;
   }
+  #Navbar div .enkr {
+    border-radius: 25%;
+    padding: 0;
+    margin: 0 10px;
+    border: black 1px solid;
+    width: 30px;
+    height: 30px;
+  }
+  #Navbar #divFirstNav {
+    width: 80%;
+  }
   #Home {
     width: 100%;
     display: flex;
@@ -115,11 +126,13 @@
     width: 150px;
     border: 2px black solid;
     border-radius: 50%;
-    font-size: 15px;
-    padding: 0;
+  }
+  #Services #servicesBox div span {
+    font-size: 16px;
+    padding: 0 2px;
     color: white;
     font-weight: bold;
-    text-shadow: rgb(0, 0, 0) 1px 0px 10px;
+    background-color: black;
   }
   #Services #servicesBox #electrical {
     background-image: url("../public/images/electrical.jpg");
@@ -141,7 +154,7 @@
     background-image: url("../public/images/flooring.jpg");
     background-size: cover;
   }
-  #Services #servicesBox #walls {
+  #Services #servicesBox #basement {
     background-image: url("../public/images/wall.jpg");
     background-size: cover;
   }
@@ -167,7 +180,7 @@
     align-items: center;
     width: 90%;
     padding: 20px 5%;
-    background-color: rgb(99, 103, 128);
+    background-color: rgb(48, 48, 48);
     color: white;
   }
   #Gallery h2 {
@@ -181,16 +194,16 @@
     justify-content: space-around;
     align-items: center;
     gap: 5px;
-    border-bottom: 3px rgb(255, 255, 255) solid;
     padding: 3px;
     margin: 3px;
   }
   #Gallery .albums .Album {
-    width: 30%;
+    width: 20%;
     cursor: pointer;
   }
   #Gallery .albums .Album .thumbnail {
     width: 100%;
+    border: 2px rgb(255, 255, 255) solid;
   }
   #Gallery .albums .Album .overlay {
     position: fixed;
@@ -208,6 +221,7 @@
     position: relative;
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
   }
   #Gallery .albums .Album .overlay .overlay-content .enlarged-image {
     max-width: 80vw;
@@ -226,6 +240,9 @@
   }
   #Gallery .albums .Album .overlay .overlay-content .imgSet {
     width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
   }
   #Gallery .albums .Album .overlay .overlay-content .imgSet img {
     margin: 5px;
@@ -289,8 +306,9 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    padding: 0;
   }
-  #Navbar div img {
+  #Navbar div #logoNav {
     height: 40px;
     padding: 30px;
   }
@@ -301,6 +319,19 @@
     padding: 10px;
     color: black;
     border-left: 1px rgb(0, 0, 0) solid;
+  }
+  #Navbar div .enkr {
+    border-radius: 25%;
+    padding: 0;
+    margin: 0 10px;
+    border: black 1px solid;
+    width: 25px;
+  }
+  #Navbar div #contactNav {
+    width: 100%;
+  }
+  #Navbar #divFirstNav {
+    width: 80%;
   }
   #Home {
     width: 100%;
@@ -378,11 +409,13 @@
     width: 150px;
     border: 2px black solid;
     border-radius: 50%;
-    font-size: 15px;
-    padding: 0;
+  }
+  #Services #servicesBox div span {
+    font-size: 16px;
+    padding: 0 2px;
     color: white;
     font-weight: bold;
-    text-shadow: rgb(0, 0, 0) 1px 0px 10px;
+    background-color: black;
   }
   #Services #servicesBox #electrical {
     background-image: url("../public/images/electrical.jpg");
@@ -404,7 +437,7 @@
     background-image: url("../public/images/flooring.jpg");
     background-size: cover;
   }
-  #Services #servicesBox #walls {
+  #Services #servicesBox #basement {
     background-image: url("../public/images/wall.jpg");
     background-size: cover;
   }
@@ -430,7 +463,7 @@
     align-items: center;
     width: 90%;
     padding: 20px 5%;
-    background-color: rgb(99, 103, 128);
+    background-color: rgb(48, 48, 48);
     color: white;
   }
   #Gallery h2 {
@@ -444,16 +477,16 @@
     justify-content: space-around;
     align-items: center;
     gap: 5px;
-    border-bottom: 3px rgb(255, 255, 255) solid;
     padding: 3px;
     margin: 3px;
   }
   #Gallery .albums .Album {
-    width: 30%;
+    width: 20%;
     cursor: pointer;
   }
   #Gallery .albums .Album .thumbnail {
     width: 100%;
+    border: 2px rgb(255, 255, 255) solid;
   }
   #Gallery .albums .Album .overlay {
     position: fixed;
@@ -471,6 +504,7 @@
     position: relative;
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
   }
   #Gallery .albums .Album .overlay .overlay-content .enlarged-image {
     max-width: 80vw;
@@ -489,6 +523,9 @@
   }
   #Gallery .albums .Album .overlay .overlay-content .imgSet {
     width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
   }
   #Gallery .albums .Album .overlay .overlay-content .imgSet img {
     margin: 5px;
@@ -553,21 +590,35 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    justify-content: flex-start;
+    padding: 0;
   }
-  #Navbar div img {
-    height: 40px;
-    padding: 5px;
+  #Navbar div #logoNav {
+    width: 135px;
+    padding: 3px;
   }
   #Navbar div a {
-    height: auto;
     font-weight: bold;
-    text-decoration: underline;
-    padding: 10px;
+    text-decoration: none;
+    padding: 0px 5px;
     color: black;
-    font-size: 15px;
+    font-size: 13px;
+  }
+  #Navbar div .enkr {
+    border-radius: 25%;
+    padding: 0;
+    margin: 0 10px;
+    border: black 1px solid;
+    width: 18px;
+  }
+  #Navbar div #contactNav {
+    width: 100%;
   }
   #Navbar div #homeNav {
     display: none;
+  }
+  #Navbar #divFirstNav {
+    width: 80%;
   }
   #Home {
     width: 100%;
@@ -623,7 +674,7 @@
     padding: 0px 0;
   }
   #Services h2 {
-    font-size: 25px;
+    font-size: 20px;
     border-bottom: 2px black solid;
     padding: 0 30px;
   }
@@ -643,14 +694,16 @@
     justify-content: center;
     align-items: center;
     aspect-ratio: 1/1;
-    width: 120px;
+    width: 95px;
     border: 2px black solid;
     border-radius: 50%;
+  }
+  #Services #servicesBox div span {
     font-size: 14px;
-    padding: 0;
+    padding: 0 2px;
     color: white;
     font-weight: bold;
-    text-shadow: rgb(0, 0, 0) -2px 0 3px;
+    background-color: black;
   }
   #Services #servicesBox #electrical {
     background-image: url("../public/images/electrical.jpg");
@@ -672,7 +725,7 @@
     background-image: url("../public/images/flooring.jpg");
     background-size: cover;
   }
-  #Services #servicesBox #walls {
+  #Services #servicesBox #basement {
     background-image: url("../public/images/wall.jpg");
     background-size: cover;
   }
@@ -697,12 +750,13 @@
     flex-flow: column nowrap;
     align-items: center;
     width: 90%;
-    padding: 20px 5%;
-    background-color: rgb(99, 103, 128);
+    padding: 0px 5%;
+    padding-bottom: 20px;
+    background-color: rgb(48, 48, 48);
     color: white;
   }
   #Gallery h2 {
-    font-size: 25px;
+    font-size: 20px;
     border-bottom: 2px white solid;
     padding: 0 30px;
   }
@@ -712,7 +766,6 @@
     justify-content: space-around;
     align-items: center;
     gap: 5px;
-    border-bottom: 3px rgb(255, 255, 255) solid;
     padding: 3px;
     margin: 3px;
   }
@@ -722,6 +775,7 @@
   }
   #Gallery .albums .Album .thumbnail {
     width: 100%;
+    border: 2px rgb(255, 255, 255) solid;
   }
   #Gallery .albums .Album .overlay {
     position: fixed;
@@ -747,8 +801,8 @@
   }
   #Gallery .albums .Album .overlay .overlay-content .close-button {
     position: fixed;
-    top: 40px;
-    right: 30px;
+    top: 30px;
+    right: 20px;
     background: white;
     padding: 6px;
     border-radius: 20px;
@@ -772,10 +826,10 @@
     flex-flow: column nowrap;
     align-items: center;
     width: 90%;
-    padding: 20px 0;
+    padding: 0px 0;
   }
   #Contact h2 {
-    font-size: 25px;
+    font-size: 20px;
     border-bottom: 2px black solid;
     padding: 0 30px;
   }
@@ -792,7 +846,7 @@
     width: auto;
     display: flex;
     flex-flow: column nowrap;
-    align-items: flex-start;
+    align-items: center;
   }
   #Contact > div img {
     border-radius: 50%;

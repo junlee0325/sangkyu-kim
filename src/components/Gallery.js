@@ -1,7 +1,9 @@
 import React from 'react'
 import { Album } from "./Album"
+import useTranslation from '../useTranslation';
 
 export const Gallery = () => {
+  const { t } = useTranslation();
 
     
     const albumA = [
@@ -62,7 +64,7 @@ export const Gallery = () => {
 
   return (
     <div id="Gallery">
-        <h2>Gallery</h2>
+        <h2>{t("gallery")}</h2>
 
         <div className="albums">
           <Album albumID={albumA} />

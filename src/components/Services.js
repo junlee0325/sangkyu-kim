@@ -1,21 +1,24 @@
 import React from 'react'
+import useTranslation from '../useTranslation';
 
 export const Services = () => {
+  const { t } = useTranslation();
+
   return (
     <div id="Services">
-        <h2>Services</h2>
-        <span>Pretty much anything from basement finishing, kitchen renovations, deck installments, storage expansion, and etc.</span>
+        <h2>{t("services")}</h2>
+        <span>{t("servicesText")}</span>
         <div id="servicesBox">
-            <div id="electrical">Electrical/Lighting</div>
-            <div id="plumbing">Plumbing</div>
-            <div id="hvac">HVAC</div>
-            <div id="repairs">General Repairs</div>
-            <div id="flooring">Flooring</div>
-            <div id="walls">Walls</div>
-            <div id="kitchen">Kitchen</div>
-            <div id="bathrooms">Bathrooms</div>
-            <div id="decks">Decks</div>
-            <div id="more">Much More...</div>
+            <div id="electrical"><span>{t("electrical")}</span></div>
+            <div id="plumbing"><span>{t("plumbing")}</span></div>
+            <div id="hvac"><span>{t("hvac")}</span></div>
+            <div id="repairs"><span>{t("repairs")}</span></div>
+            <div id="flooring"><span>{t("flooring")}</span></div>
+            <div id="basement"><span>{t("basement")}</span></div>
+            <div id="kitchen"><span>{t("kitchen")}</span></div>
+            <div id="bathrooms"><span>{t("bathrooms")}</span></div>
+            <div id="decks"><span>{t("decks")}</span></div>
+            <div id="more"><span>{t("more")}</span></div>
         </div>
     </div>
   )
