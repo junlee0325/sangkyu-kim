@@ -17,15 +17,14 @@ function App() {
         <Gallery />
         <Contact />
       </div>
-    <footer>
-		<span>© 2024 Skye Contractor Inc. All rights reserved.&nbsp;</span>
-		<span>
-			Created by
-			<a href="https://github.com/junlee0325/sangkyu-kim" target="_blank">
-				Jun Kyung Lee
-			</a>
-		</span>
-	</footer>
+      <footer>
+	<span>
+	  © 2024 Skye Contractor Inc. All rights reserved.&nbsp;
+	</span>
+	<span>Created by
+	  <a href="https://github.com/junlee0325/sangkyu-kim" target="_blank">Jun Kyung Lee</a>
+	</span>
+       </footer>
     </div>
   );
 }
