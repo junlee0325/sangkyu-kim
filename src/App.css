@@ -1,6 +1,14 @@
 * {
   font-family: "Titillium Web", sans-serif;
 }
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 10px;
+    font-size: 12px;
+    margin-top: auto;
+  }
 
 @media (min-width: 1201px) {
   #App {
