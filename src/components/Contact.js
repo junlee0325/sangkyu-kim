@@ -9,7 +9,7 @@ export const Contact = () => {
     <div id="Contact">
         <h2>{t("contact")}</h2>
         <div>
-            <img src="/images/portrait.jpg" alt="portrait"></img>
+            <img src="/images/contact.png" alt="contact"></img>
             <div>
                 <h4>{t("name")}</h4>
                 <p>770-367-1533</p>
